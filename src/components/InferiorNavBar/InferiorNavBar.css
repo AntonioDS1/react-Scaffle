@@ -23,6 +23,7 @@
   justify-content: space-around;
   align-items: center;
   gap: 12vw;
+  padding-left: 1.4rem;
   @media (max-width: 471px) {
     gap: 2vw;
   }

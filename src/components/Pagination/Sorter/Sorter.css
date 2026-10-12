@@ -46,3 +46,7 @@ select.sorter-selector::picker-icon {
 select.sorter-selector:open::picker-icon {
   transform: translateX(-1rem) rotate(180deg);
 }
+
+option:focus-visible {
+  outline-color: transparent;
+}
