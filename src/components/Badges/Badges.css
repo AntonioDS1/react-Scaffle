@@ -1,0 +1,10 @@
+.badges {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: -10px;
+  right: -15px;
+  gap: 10px;
+  z-index: 10000000;
+}

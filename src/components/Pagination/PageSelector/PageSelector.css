@@ -1,0 +1,36 @@
+.page-selector {
+  position: absolute;
+  right: 0.1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  @media (max-width: 1155px) {
+    gap: 0.3rem;
+  }
+  @media (max-width: 436px) {
+    position: relative;
+    margin: 0;
+    gap: 3rem;
+  }
+}
+
+.page-selector button {
+  border-radius: 50px;
+  border: 1px solid #e8e6e3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2px 3rem 0 3rem;
+  flex-direction: column;
+  height: 3rem;
+  width: 3rem;
+  background-color: white;
+  color: gray;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.page-selector button:hover {
+  filter: brightness(80%);
+}

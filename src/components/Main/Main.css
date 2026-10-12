@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-main-bg);
+  padding: 2.2rem;
+  overflow-y: hidden;
+}

@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 20rem;
+  padding: 0 2rem;
+  @media (max-width: 749px) {
+    display: none;
+  }
+  border-right: 1px solid #e8e6e3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  gap: 14px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 2.5rem auto;
+}
+
+.logo p {
+  font-size: 2.1rem;
+}
+
+.logo img {
+  height: 46px;
+  width: 46px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.navbar-footer {
+  margin: 3.2rem 0rem;
+  font-size: 1.1rem;
+}
+
+.num-books {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1;
+}

@@ -1,0 +1,107 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 184 24"
+  width="184"
+  height="24"
+>
+  <defs>
+    <symbol id="segnalibro" viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="6" fill="#E8653A" />
+      <path
+        d="M8.5 5 H15.5 Q16.5 5 16.5 6 V19 L12 15.75 L7.5 19 V6 Q7.5 5 8.5 5 Z"
+        fill="#FFFFFF"
+        stroke="#FFFFFF"
+        stroke-width="0.5"
+        stroke-linejoin="round"
+      />
+    </symbol>
+    <symbol id="stella-base" viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="6" fill="#E8653A" />
+      <polygon
+        points="12,3.4 14.88,8.94 21.04,9.96 16.66,14.41 17.58,20.59 12,17.8 6.42,20.59 7.34,14.41 2.96,9.96 9.12,8.94"
+        fill="#FFFFFF"
+        stroke="#FFFFFF"
+        stroke-width="1.5"
+        stroke-linejoin="round"
+      />
+    </symbol>
+    <symbol id="stella-1" viewBox="0 0 24 24">
+      <use href="#stella-base" xlink:href="#stella-base" width="24" height="24" />
+      <text
+        x="12"
+        y="16.1"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="9"
+        fill="#E8653A"
+      >
+        1
+      </text>
+    </symbol>
+    <symbol id="stella-2" viewBox="0 0 24 24">
+      <use href="#stella-base" xlink:href="#stella-base" width="24" height="24" />
+      <text
+        x="12"
+        y="16.1"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="9"
+        fill="#E8653A"
+      >
+        2
+      </text>
+    </symbol>
+    <symbol id="stella-3" viewBox="0 0 24 24">
+      <use href="#stella-base" xlink:href="#stella-base" width="24" height="24" />
+      <text
+        x="12"
+        y="16.1"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="9"
+        fill="#E8653A"
+      >
+        3
+      </text>
+    </symbol>
+    <symbol id="stella-4" viewBox="0 0 24 24">
+      <use href="#stella-base" xlink:href="#stella-base" width="24" height="24" />
+      <text
+        x="12"
+        y="16.1"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="9"
+        fill="#E8653A"
+      >
+        4
+      </text>
+    </symbol>
+    <symbol id="stella-5" viewBox="0 0 24 24">
+      <use href="#stella-base" xlink:href="#stella-base" width="24" height="24" />
+      <text
+        x="12"
+        y="16.1"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="9"
+        fill="#E8653A"
+      >
+        5
+      </text>
+    </symbol>
+  </defs>
+
+  <use href="#segnalibro" xlink:href="#segnalibro" x="0" y="0" width="24" height="24" />
+  <use href="#stella-1" xlink:href="#stella-1" x="32" y="0" width="24" height="24" />
+  <use href="#stella-2" xlink:href="#stella-2" x="64" y="0" width="24" height="24" />
+  <use href="#stella-3" xlink:href="#stella-3" x="96" y="0" width="24" height="24" />
+  <use href="#stella-4" xlink:href="#stella-4" x="128" y="0" width="24" height="24" />
+  <use href="#stella-5" xlink:href="#stella-5" x="160" y="0" width="24" height="24" />
+</svg>;

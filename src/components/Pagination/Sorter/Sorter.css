@@ -1,0 +1,48 @@
+.sorter {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.sorter-selector {
+  border: 1px solid #e8e6e3;
+  height: 2.3rem;
+  width: 6rem;
+  padding: 0 0 0 0.7rem;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  @media (max-width: 436px) {
+    width: 50vw;
+  }
+}
+
+.sorter-selector:focus-visible {
+  outline-color: transparent;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+::picker(select) {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 1rem 1rem;
+}
+
+select.sorter-selector::picker-icon {
+  content: '▾';
+  color: var(--color-link-active);
+  font-size: 24px;
+  transition: transform 0.2s ease;
+  transform: translateX(-1rem);
+}
+
+select.sorter-selector:open::picker-icon {
+  transform: translateX(-1rem) rotate(180deg);
+}

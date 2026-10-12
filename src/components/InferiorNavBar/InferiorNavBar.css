@@ -1,0 +1,49 @@
+.inferior-navbar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid #e8e6e3;
+  height: 5rem;
+  width: 100vw;
+  @media (max-width: 749px) {
+    display: flex;
+  }
+}
+
+.inferior-navbar img {
+  height: 3rem;
+}
+
+.inferior-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12vw;
+  @media (max-width: 471px) {
+    gap: 2vw;
+  }
+  @media (max-width: 400px) {
+    justify-content: center;
+  }
+}
+
+.inferior-links li button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 4rem;
+}
+
+.inferior-links li button svg {
+  transform: scale(2);
+}
+
+.inferior-navbar .navbar-footer {
+  transform: scale(0.8);
+}

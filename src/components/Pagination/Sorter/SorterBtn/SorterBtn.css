@@ -1,0 +1,26 @@
+.sorter button {
+  border: 1px solid #e8e6e3;
+  height: 2rem;
+  border-radius: 9999px;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+.sorter button:hover {
+  background-color: var(--color-button);
+  color: white;
+}
+
+.sorter button.active {
+  color: white;
+  background-color: var(--color-button);
+}

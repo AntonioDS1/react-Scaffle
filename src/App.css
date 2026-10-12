@@ -1,0 +1,10 @@
+.app {
+  height: 845px;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  @media (max-width: 1440px) {
+    height: 100vh;
+  }
+}
