@@ -1,113 +1,117 @@
-/* ===== Card ===== */
 .book-card {
-  --scale: 0.6;
+  --stack-color: #e6dfd3;
+  --accent: #2f5d50;
 
-  position: relative;
+  position: relative; /* per posizionare i Badges in absolute */
   display: flex;
   flex-direction: column;
-  gap: calc(4px * var(--scale));
-
-  width: calc(17.75rem * var(--scale));
-  height: calc(32rem * var(--scale));
-  padding: 10px;
-
+  min-width: 0;
+  /* niente max-height / max-width: la larghezza la decide la colonna della griglia,
+     l'altezza segue da sola grazie all'aspect-ratio della copertina */
+  padding: 12px 12px 10px;
   background: #fff;
-  border: 1px solid #e8e6e3;
-  border-radius: 5px;
-  overflow: visible;
-
-  font-size: calc(1.4rem * var(--scale));
+  border-radius: 4px;
   cursor: pointer;
 
-  /* ombra principale */
   box-shadow:
-    0 3px 5px rgba(0, 0, 0, 0.12),
-    5px 7px 12px rgba(0, 0, 0, 0.12);
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    12px 0 0 -5px var(--stack-color),
+    12px 1px 3px -5px rgba(0, 0, 0, 0.18);
 
-  /* uscita dall'hover: l'ombra torna subito, la card scende piano */
   transition:
-    transform 0.4s ease,
-    box-shadow 0s;
-  @media (max-height: 840px) {
-    --scale: 0.55;
-    height: calc(64vh * var(--scale));
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  @media (orientation: landscape) and (max-height: 600px) {
+    height: 55vh;
+    width: 18vw;
   }
 }
 
-/* Spessore delle pagine */
-.book-card::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-
-  top: 3px;
-  right: -5px;
-  bottom: 3px;
-  width: 6px;
-
-  background: #e8e2d9;
-  border-radius: 0 4px 4px 0;
-
+.book-card:hover {
+  transform: translateY(-2px);
   box-shadow:
-    2px 0 0 #d8d1c7,
-    4px 0 3px rgba(0, 0, 0, 0.15);
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    12px 0 0 -5px var(--stack-color),
+    12px 2px 4px -5px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== Contenuto ===== */
+.book-card.active {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .book-card img {
+  display: block;
   width: 100%;
-  height: 200px;
+  aspect-ratio: 2 / 3; /* niente max-height: altrimenti la proporzione salta */
   object-fit: cover;
-  margin-bottom: 8px;
-
-  border-radius: 3px;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 0, 0, 0.08),
-    0 1px 2px rgba(0, 0, 0, 0.15);
-  @media (max-height: 840px) {
-    --scale: 0.55;
-    height: calc(40vh * var(--scale));
+  margin-bottom: 10px;
+  border-radius: 2px;
+  background: #ece9e2;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  @media (orientation: landscape) and (max-height: 600px) {
+    object-fit: fill;
+    max-height: 30vh;
   }
 }
 
-.book-card h3 {
+.book-title {
+  margin: 0 0 4px;
+  font-size: 13px;
   font-weight: 600;
+  line-height: 1.3;
+  color: #1d1d1b;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 .book-authors {
-  line-height: 1.2;
+  margin: 0 0 2px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #444;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* ===== Stato attivo ===== */
-.book-card.active {
-  --active-color: var(--color-link-active);
-
-  border: 2px solid var(--active-color);
-
-  box-shadow:
-    0 3px 5px color-mix(in srgb, var(--active-color) 35%, transparent),
-    5px 7px 12px color-mix(in srgb, var(--active-color) 45%, transparent);
+.book-year {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
 }
 
-.book-card.active::before {
-  background: var(--active-color);
-
-  box-shadow:
-    2px 0 0 color-mix(in srgb, var(--active-color) 80%, black),
-    4px 0 3px color-mix(in srgb, var(--active-color) 40%, black);
+/* Telefono in verticale */
+@media (max-width: 520px) and (orientation: portrait) {
+  .book-card {
+    padding: 10px 10px 8px;
+  }
 }
 
-/* ===== Hover ===== */
-.book-card:hover {
-  transform: translateY(-5px) rotate(-0.3deg);
+/* Telefono in orizzontale / schermi bassi: card più compatte */
+@media (orientation: landscape) and (max-height: 500px) {
+  .book-card {
+    padding: 8px 8px 6px;
+  }
 
-  box-shadow:
-    0 5px 8px rgba(0, 0, 0, 0.12),
-    8px 14px 22px rgba(0, 0, 0, 0.18);
+  .book-card img {
+    margin-bottom: 6px;
+  }
 
-  /* entrata in hover: tutto animato */
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  .book-title {
+    font-size: 12px;
+  }
+
+  .book-authors,
+  .book-year {
+    font-size: 11px;
+  }
+
+  .book-authors {
+    -webkit-line-clamp: 1;
+  }
 }

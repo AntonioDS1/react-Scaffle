@@ -2,6 +2,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  bottom: 0dvh;
   display: none;
   justify-content: space-around;
   align-items: center;
@@ -9,6 +10,7 @@
   border-top: 1px solid #e8e6e3;
   height: 5rem;
   width: 100vw;
+  anchor-name: --inf-nav;
   @media (max-width: 749px) {
     display: flex;
   }
@@ -27,9 +29,6 @@
   @media (max-width: 471px) {
     gap: 2vw;
   }
-  @media (max-width: 400px) {
-    justify-content: center;
-  }
 }
 
 .inferior-links li button {
@@ -39,6 +38,7 @@
   justify-content: center;
   gap: 0.5rem;
   height: 4rem;
+  white-space: nowrap;
 }
 
 .inferior-links li button svg {
@@ -47,4 +47,5 @@
 
 .inferior-navbar .navbar-footer {
   transform: scale(0.8);
+  white-space: nowrap;
 }

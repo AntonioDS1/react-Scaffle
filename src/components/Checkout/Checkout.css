@@ -2,7 +2,7 @@
 .overlay {
   display: none;
   position: fixed;
-  @media (max-width: 1111px) {
+  @media (max-width: 1150px) {
     display: block;
     width: 100vw;
     height: 200vh;
@@ -22,7 +22,7 @@
   padding: 0 2rem;
   border-left: 1px solid #e8e6e3;
   box-shadow: -3px 1px 8px -3px rgba(0, 0, 0, 0.45);
-  @media (max-width: 1111px) {
+  @media (max-width: 1150px) {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);

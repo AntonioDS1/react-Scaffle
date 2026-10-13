@@ -18,21 +18,25 @@ const PageSelector = ({ pagination, setPagination, books, bookshelf, activeLink,
     <div className="page-selector">
       {currentNumPages > 1 && currentNumPages ? (
         <>
-          {pagination > 1 ? (
-            <button onClick={() => setPagination((prev) => (prev <= 1 ? prev : prev - 1))}>
+          {
+            <button
+              style={{ opacity: pagination > 1 ? 1 : 0 }}
+              onClick={() => setPagination((prev) => (prev <= 1 ? prev : prev - 1))}
+            >
               {'<'}
             </button>
-          ) : null}
+          }
           <p>
             Pagina {pagination} di {currentNumPages}
           </p>
-          {pagination !== currentNumPages ? (
+          {
             <button
+              style={{ opacity: pagination !== currentNumPages ? 1 : 0 }}
               onClick={() => setPagination((prev) => (prev >= currentNumPages ? prev : prev + 1))}
             >
               {'>'}
             </button>
-          ) : null}
+          }
         </>
       ) : null}
     </div>

@@ -3,7 +3,7 @@ import './Sorter.css';
 const Sorter = ({ children, mainWidth, setSortBy, sortBy }) => {
   return (
     <div className="sorter">
-      {mainWidth > 715 ? (
+      {mainWidth > 715 && window.innerHeight < 720 ? (
         children
       ) : (
         <select
